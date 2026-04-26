@@ -1,0 +1,311 @@
+GPAC/
+├─ README.md
+├─ LICENSE
+├─ CHANGELOG.md
+├─ CONTRIBUTING.md
+├─ CODE_OF_CONDUCT.md
+├─ SECURITY.md
+├─ ROADMAP.md
+├─ GPAC_SPEC.md
+├─ GPAC_LANGUAGE_REFERENCE.md
+├─ GPAC_BYTECODE_SPEC.md
+├─ GPAC_IR_SPEC.md
+├─ GPAC_ZVM_SPEC.md
+├─ GPAC_ABI_SPEC.md
+├─ GPAC_OPTIMIZATION_GUIDE.md
+├─ GPAC_SAFETY_MODEL.md
+├─ GPAC_DIAGNOSTICS.md
+│
+├─ docs/
+│  ├─ getting-started.md
+│  ├─ installation.md
+│  ├─ syntax.md
+│  ├─ type-system.md
+│  ├─ memory-model.md
+│  ├─ concurrency-tracks.md
+│  ├─ bytecode.md
+│  ├─ ir.md
+│  ├─ zvm.md
+│  ├─ llvm-lowering.md
+│  ├─ native-output.md
+│  ├─ windows-x64-abi.md
+│  ├─ diagnostics.md
+│  ├─ security.md
+│  ├─ examples.md
+│  └─ faq.md
+│
+├─ examples/
+│  ├─ hello_world.gpac
+│  ├─ variables.gpac
+│  ├─ procedures.gpac
+│  ├─ structs.gpac
+│  ├─ arrays.gpac
+│  ├─ memory_regions.gpac
+│  ├─ tracks.gpac
+│  ├─ loops.gpac
+│  ├─ conditionals.gpac
+│  ├─ console_io.gpac
+│  ├─ native_bridge.gpac
+│  └─ simulation_kernel.gpac
+│
+├─ grammar/
+│  ├─ GPACLexer.g4
+│  ├─ GPACParser.g4
+│  ├─ tokens.json
+│  ├─ grammar.ebnf
+│  └─ syntax-tests/
+│     ├─ valid/
+│     └─ invalid/
+│
+├─ src/
+│  ├─ main.cpp
+│  ├─ gpac.hpp
+│  ├─ gpac.cpp
+│  │
+│  ├─ cli/
+│  │  ├─ cli.hpp
+│  │  ├─ cli.cpp
+│  │  ├─ commands.hpp
+│  │  └─ commands.cpp
+│  │
+│  ├─ lexer/
+│  │  ├─ token.hpp
+│  │  ├─ lexer.hpp
+│  │  └─ lexer.cpp
+│  │
+│  ├─ parser/
+│  │  ├─ ast.hpp
+│  │  ├─ ast.cpp
+│  │  ├─ parser.hpp
+│  │  └─ parser.cpp
+│  │
+│  ├─ sema/
+│  │  ├─ type_checker.hpp
+│  │  ├─ type_checker.cpp
+│  │  ├─ symbol_table.hpp
+│  │  ├─ symbol_table.cpp
+│  │  ├─ memory_legality.hpp
+│  │  ├─ memory_legality.cpp
+│  │  ├─ call_validator.hpp
+│  │  └─ call_validator.cpp
+│  │
+│  ├─ ir/
+│  │  ├─ gpac_ir.hpp
+│  │  ├─ gpac_ir.cpp
+│  │  ├─ ir_builder.hpp
+│  │  ├─ ir_builder.cpp
+│  │  ├─ ir_verify.hpp
+│  │  ├─ ir_verify.cpp
+│  │  ├─ ssa.hpp
+│  │  └─ ssa.cpp
+│  │
+│  ├─ bytecode/
+│  │  ├─ bytecode.hpp
+│  │  ├─ bytecode.cpp
+│  │  ├─ bytecode_writer.hpp
+│  │  ├─ bytecode_writer.cpp
+│  │  ├─ bytecode_reader.hpp
+│  │  ├─ bytecode_reader.cpp
+│  │  ├─ bytecode_verify.hpp
+│  │  └─ bytecode_verify.cpp
+│  │
+│  ├─ zvm/
+│  │  ├─ zvm.hpp
+│  │  ├─ zvm.cpp
+│  │  ├─ verifier.hpp
+│  │  ├─ verifier.cpp
+│  │  ├─ execution_seal.hpp
+│  │  ├─ execution_seal.cpp
+│  │  ├─ native_cache.hpp
+│  │  └─ native_cache.cpp
+│  │
+│  ├─ llvm/
+│  │  ├─ llvm_context.hpp
+│  │  ├─ llvm_context.cpp
+│  │  ├─ llvm_lifter.hpp
+│  │  ├─ llvm_lifter.cpp
+│  │  ├─ llvm_optimizer.hpp
+│  │  ├─ llvm_optimizer.cpp
+│  │  ├─ llvm_emit.hpp
+│  │  └─ llvm_emit.cpp
+│  │
+│  ├─ backend/
+│  │  ├─ target.hpp
+│  │  ├─ target.cpp
+│  │  ├─ win64_abi.hpp
+│  │  ├─ win64_abi.cpp
+│  │  ├─ pe_coff_writer.hpp
+│  │  ├─ pe_coff_writer.cpp
+│  │  ├─ object_writer.hpp
+│  │  ├─ object_writer.cpp
+│  │  ├─ exe_linker.hpp
+│  │  └─ exe_linker.cpp
+│  │
+│  ├─ diagnostics/
+│  │  ├─ diagnostic.hpp
+│  │  ├─ diagnostic.cpp
+│  │  ├─ diagnostic_codes.hpp
+│  │  └─ reporter.cpp
+│  │
+│  ├─ runtime/
+│  │  ├─ gpac_runtime.hpp
+│  │  ├─ gpac_runtime.cpp
+│  │  ├─ console.hpp
+│  │  ├─ console.cpp
+│  │  ├─ memory_regions.hpp
+│  │  ├─ memory_regions.cpp
+│  │  ├─ track_runtime.hpp
+│  │  └─ track_runtime.cpp
+│  │
+│  └─ bridge/
+│     ├─ native_bridge.hpp
+│     ├─ native_bridge.cpp
+│     ├─ capability.hpp
+│     ├─ capability.cpp
+│     ├─ filesystem_bridge.hpp
+│     ├─ filesystem_bridge.cpp
+│     ├─ network_bridge.hpp
+│     └─ network_bridge.cpp
+│
+├─ include/
+│  ├─ gpac/
+│  │  ├─ gpac_api.hpp
+│  │  ├─ gpac_types.hpp
+│  │  ├─ gpac_bytecode.hpp
+│  │  ├─ gpac_ir.hpp
+│  │  ├─ gpac_zvm.hpp
+│  │  └─ gpac_runtime.hpp
+│
+├─ std/
+│  ├─ console.gpac
+│  ├─ math.gpac
+│  ├─ memory.gpac
+│  ├─ array.gpac
+│  ├─ string.gpac
+│  ├─ bool.gpac
+│  ├─ tracks.gpac
+│  ├─ system.gpac
+│  └─ prelude.gpac
+│
+├─ tests/
+│  ├─ lexer_tests.cpp
+│  ├─ parser_tests.cpp
+│  ├─ type_checker_tests.cpp
+│  ├─ memory_legality_tests.cpp
+│  ├─ ir_tests.cpp
+│  ├─ bytecode_tests.cpp
+│  ├─ zvm_tests.cpp
+│  ├─ llvm_lifter_tests.cpp
+│  ├─ backend_tests.cpp
+│  ├─ diagnostics_tests.cpp
+│  └─ integration_tests.cpp
+│
+├─ testdata/
+│  ├─ valid/
+│  │  ├─ hello_world.gpac
+│  │  ├─ arithmetic.gpac
+│  │  ├─ procedures.gpac
+│  │  ├─ memory_regions.gpac
+│  │  └─ tracks.gpac
+│  ├─ invalid/
+│  │  ├─ bad_type.gpac
+│  │  ├─ illegal_memory.gpac
+│  │  ├─ bad_call.gpac
+│  │  ├─ malformed_bytecode.gpbc
+│  │  └─ invalid_track_merge.gpac
+│  └─ bytecode/
+│     ├─ hello_world.gpbc
+│     ├─ arithmetic.gpbc
+│     └─ procedure_call.gpbc
+│
+├─ tools/
+│  ├─ gpac-fmt/
+│  │  ├─ main.cpp
+│  │  └─ formatter.cpp
+│  ├─ gpac-lsp/
+│  │  ├─ main.cpp
+│  │  ├─ server.cpp
+│  │  └─ protocol.hpp
+│  ├─ gpac-disasm/
+│  │  ├─ main.cpp
+│  │  └─ disassembler.cpp
+│  ├─ gpac-bytecode-viewer/
+│  │  ├─ main.cpp
+│  │  └─ viewer.cpp
+│  └─ gpac-package/
+│     ├─ main.cpp
+│     └─ package.cpp
+│
+├─ vscode/
+│  ├─ package.json
+│  ├─ language-configuration.json
+│  ├─ syntaxes/
+│  │  └─ gpac.tmLanguage.json
+│  └─ snippets/
+│     └─ gpac.json
+│
+├─ visual-studio/
+│  ├─ GPACLanguageService.vsixmanifest
+│  ├─ GPACClassifier.cs
+│  ├─ GPACContentType.cs
+│  └─ GPACSyntaxHighlighting.xml
+│
+├─ cmake/
+│  ├─ GPACConfig.cmake
+│  ├─ CompilerWarnings.cmake
+│  ├─ LLVMSetup.cmake
+│  └─ PlatformTargets.cmake
+│
+├─ scripts/
+│  ├─ build.ps1
+│  ├─ build.sh
+│  ├─ test.ps1
+│  ├─ test.sh
+│  ├─ package.ps1
+│  ├─ package.sh
+│  ├─ install.ps1
+│  └─ install.sh
+│
+├─ .github/
+│  ├─ workflows/
+│  │  ├─ build.yml
+│  │  ├─ test.yml
+│  │  ├─ release.yml
+│  │  ├─ codeql.yml
+│  │  └─ docs.yml
+│  ├─ ISSUE_TEMPLATE/
+│  │  ├─ bug_report.md
+│  │  ├─ feature_request.md
+│  │  └─ language_design.md
+│  └─ pull_request_template.md
+│
+├─ packages/
+│  ├─ gpac-cli/
+│  ├─ gpac-compiler/
+│  ├─ gpac-runtime/
+│  ├─ gpac-stdlib/
+│  └─ gpac-tools/
+│
+├─ benchmarks/
+│  ├─ arithmetic_bench.cpp
+│  ├─ loop_bench.cpp
+│  ├─ bytecode_lift_bench.cpp
+│  ├─ native_cache_bench.cpp
+│  ├─ track_parallel_bench.cpp
+│  └─ compare_cpp/
+│     ├─ cpp_baseline.cpp
+│     └─ gpac_equivalent.gpac
+│
+├─ build/
+│  └─ .gitkeep
+│
+├─ dist/
+│  └─ .gitkeep
+│
+├─ CMakeLists.txt
+├─ vcpkg.json
+├─ clang-format
+├─ clang-tidy
+├─ .editorconfig
+├─ .gitignore
+└─ gpac.toml
