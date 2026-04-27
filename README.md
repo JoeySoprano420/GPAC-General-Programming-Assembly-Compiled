@@ -1071,6 +1071,3 @@ That is the crown jewel.
 
 ⭐⭐⭐⭐
 
-
-
-…and actually bring this beast to life piece by piece.
