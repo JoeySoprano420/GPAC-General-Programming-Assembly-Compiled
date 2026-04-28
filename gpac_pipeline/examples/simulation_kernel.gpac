@@ -1,0 +1,37 @@
+-- simulation_kernel.gpac
+Main: program = simulation_kernel
+
+track Physics
+track AI
+
+struct Entity
+    id: int
+    position: float
+    velocity: float
+end
+
+Proc update_physics(e: ptr<Entity>)
+    e.position = e.position + e.velocity
+end
+
+Proc update_ai(e: ptr<Entity>)
+    if (e.position > 100.0)
+        e.velocity = -e.velocity
+    end
+end
+
+Proc main()
+    let e: Entity
+    e.id = 1
+    e.position = 0.0
+    e.velocity = 5.0
+
+    let step: int = 0
+
+    loop (step < 10)
+        run update_physics(&e) on Physics
+        run update_ai(&e) on AI
+        print e.position -> console
+        step = step + 1
+    end
+end

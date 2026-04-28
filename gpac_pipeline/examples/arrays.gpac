@@ -1,0 +1,12 @@
+-- arrays.gpac
+Main: program = arrays_demo
+
+Proc main()
+    let nums: array<int> = [1, 2, 3, 4, 5]
+    let i: int = 0
+
+    loop (i < 5)
+        print nums[i] -> console
+        i = i + 1
+    end
+end
