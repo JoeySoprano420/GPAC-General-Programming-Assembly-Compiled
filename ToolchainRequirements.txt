@@ -11,4 +11,8 @@ generated C++
 textual LLVM IR artifact
 Production ANTLR command
 
+Install ANTLR4 and generate C++ parser files:
 
+antlr4 -Dlanguage=Cpp -visitor -o generated grammar/GPAC.g4
+
+Then wire generated parser classes into src/frontend.cpp.
