@@ -165,3 +165,6 @@ Run:
 
 Bash-
 ./gpac_vm
+
+(Windows)
+gpac_vm
