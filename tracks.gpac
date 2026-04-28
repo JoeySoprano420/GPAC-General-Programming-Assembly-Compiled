@@ -1,0 +1,19 @@
+-- tracks.gpac
+
+Main: program = tracks_demo
+
+track WorkerA
+track WorkerB
+
+Proc taskA()
+    print "Running A" -> console
+end
+
+Proc taskB()
+    print "Running B" -> console
+end
+
+Proc main()
+    run taskA on WorkerA
+    run taskB on WorkerB
+end
