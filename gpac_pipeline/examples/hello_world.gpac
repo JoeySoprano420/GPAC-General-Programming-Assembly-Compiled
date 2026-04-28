@@ -1,6 +1,0 @@
--- hello_world.gpac
-Main: program = hello_world
-
-Proc main()
-    print "Hello, World!" -> console
-end
