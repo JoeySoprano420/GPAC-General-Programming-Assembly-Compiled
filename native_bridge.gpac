@@ -1,0 +1,10 @@
+-- native_bridge.gpac
+
+Main: program = native_bridge_demo
+
+extern Proc native_add(a: int, b: int) -> int
+
+Proc main()
+    let result: int = call native_add(5, 7)
+    print result -> console
+end
