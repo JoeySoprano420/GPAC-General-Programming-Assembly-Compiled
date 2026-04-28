@@ -1,0 +1,9 @@
+module math_backend
+
+func main -> void
+block entry
+  %0 = const.string "GPAC backend math path online"
+  print %0
+  ret
+end
+end

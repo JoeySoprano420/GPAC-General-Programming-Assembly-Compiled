@@ -1,0 +1,9 @@
+module hello_backend
+
+func main -> void
+block entry
+  %0 = const.string "Hello from GPAC backend"
+  print %0
+  ret
+end
+end

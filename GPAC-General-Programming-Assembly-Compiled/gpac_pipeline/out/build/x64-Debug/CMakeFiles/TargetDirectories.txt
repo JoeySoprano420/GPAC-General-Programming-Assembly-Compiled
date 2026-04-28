@@ -1,0 +1,4 @@
+C:/Users/420up/source/repos/JoeySoprano420/GPAC-General-Programming-Assembly-Compiled/gpac_pipeline/out/build/x64-Debug/CMakeFiles/gpac_zvm.dir
+C:/Users/420up/source/repos/JoeySoprano420/GPAC-General-Programming-Assembly-Compiled/gpac_pipeline/out/build/x64-Debug/CMakeFiles/gpac_frontend.dir
+C:/Users/420up/source/repos/JoeySoprano420/GPAC-General-Programming-Assembly-Compiled/gpac_pipeline/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/420up/source/repos/JoeySoprano420/GPAC-General-Programming-Assembly-Compiled/gpac_pipeline/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

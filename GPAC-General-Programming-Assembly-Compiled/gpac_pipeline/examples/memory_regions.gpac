@@ -1,0 +1,13 @@
+-- memory_regions.gpac
+Main: program = memory_demo
+
+memory LocalArena delegates CoreHeap
+memory Scratch delegates StackBurst
+
+Proc main()
+    let a: int = 10 in LocalArena
+    let b: int = 20 in Scratch
+
+    print a -> console
+    print b -> console
+end

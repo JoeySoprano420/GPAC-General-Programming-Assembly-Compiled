@@ -1,0 +1,12 @@
+-- variables.gpac
+Main: program = variables_demo
+
+Proc main()
+    let name: string = "GPAC"
+    let version: int = 1
+    let active: bool = true
+
+    print name -> console
+    print version -> console
+    print active -> console
+end
