@@ -152,3 +152,16 @@ The crown is:
 
 ⭐⭐⭐
 
+⭐⭐⭐
+
+Download gpac_assemblypp_runtime.cpp
+
+Build it with:
+
+Bash-
+g++ -std=c++20 -O3 -pthread gpac_assemblypp_runtime.cpp -o gpac_vm
+
+Run:
+
+Bash-
+./gpac_vm
