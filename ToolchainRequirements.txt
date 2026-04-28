@@ -11,4 +11,4 @@ generated C++
 textual LLVM IR artifact
 Production ANTLR command
 
-Install ANTLR4 and generate C++ parser files:
+
