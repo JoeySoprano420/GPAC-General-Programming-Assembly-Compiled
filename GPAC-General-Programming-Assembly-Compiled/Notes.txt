@@ -1,0 +1,41 @@
+unified GPAC driver that joins the frontend and backend into one automatic pipeline:
+
+.gpac
+→ frontend parse/semantic phase
+→ GPAC IR
+→ backend bytecode
+→ verifier
+→ LLVM/C++ native emission
+→ executable
+
+Folder layout:
+
+GPAC_ROOT/
+│
+├─ frontend/
+│  └─ src/
+│     └─ gpac.py
+│
+├─ backend/
+│  └─ tools/
+│     └─ gpac_backend.py
+│
+├─ gpac_unified_driver.cpp
+│
+└─ examples/
+   └─ hello_world.gpac
+
+Build the unified compiler:
+
+g++ -std=c++20 -O2 gpac_unified_driver.cpp -o gpac
+
+Run it:
+
+./gpac examples/hello_world.gpac -o hello_world
+
+Windows:
+
+g++ -std=c++20 -O2 gpac_unified_driver.cpp -o gpac.exe
+.\gpac.exe examples\hello_world.gpac -o hello_world.exe
+
+This joins both bundles into one automatic unit: frontend emits, bridge creates GPIR, backend verifies/lowers, and the driver builds the final executable.
