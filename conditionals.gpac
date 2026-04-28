@@ -1,0 +1,13 @@
+-- conditionals.gpac
+
+Main: program = conditionals_demo
+
+Proc main()
+    let value: int = 42
+
+    if (value > 50)
+        print "Greater than 50" -> console
+    else
+        print "Less or equal to 50" -> console
+    end
+end
