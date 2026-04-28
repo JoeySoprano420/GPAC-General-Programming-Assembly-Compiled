@@ -1,0 +1,14 @@
+Toolchain requirements
+
+For executable output, install one of:
+
+clang++
+g++
+
+The bootstrap compiler always emits:
+
+generated C++
+textual LLVM IR artifact
+Production ANTLR command
+
+Install ANTLR4 and generate C++ parser files:
