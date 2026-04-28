@@ -39,3 +39,116 @@ g++ -std=c++20 -O2 gpac_unified_driver.cpp -o gpac.exe
 .\gpac.exe examples\hello_world.gpac -o hello_world.exe
 
 This joins both bundles into one automatic unit: frontend emits, bridge creates GPIR, backend verifies/lowers, and the driver builds the final executable.
+
+⭐⭐⭐
+
+So far, **GPAC is a working bootstrap language/toolchain**, not a complete production language yet.
+
+It currently does this:
+
+```text
+.gpac source
+→ bootstrap frontend
+→ generated C++
+→ backend GPIR bridge
+→ bytecode JSON
+→ LLVM text artifact
+→ native executable through g++/clang++
+```
+
+## What GPAC can currently do
+
+Using the current files, GPAC supports:
+
+```text
+comments with --
+program declarations
+procedures
+basic variables
+int / float / bool / string
+console printing
+simple console input
+function calls
+conditionals
+loops
+struct declarations
+basic arrays lowered to C++ vectors
+basic track execution through threads
+a native bridge example
+simple simulation-style loops
+```
+
+## What can currently be built with only GPAC
+
+Right now, you can realistically build:
+
+```text
+console apps
+hello-world programs
+calculators
+small CLI tools
+text-based demos
+simple procedure-based programs
+basic data-structure examples
+loop/condition demos
+small simulations
+toy engine kernels
+basic threaded task demos
+native-bridge experiments
+compiler test programs
+```
+
+Examples:
+
+```text
+hello_world.gpac
+variables.gpac
+procedures.gpac
+loops.gpac
+conditionals.gpac
+console_io.gpac
+simulation_kernel.gpac
+```
+
+## What it cannot fully build yet
+
+It does **not yet** fully support:
+
+```text
+large applications
+real GUI apps
+full standard library
+real package manager
+full module imports
+advanced memory safety
+complete struct/array semantics
+full LLVM object backend
+real bytecode-only execution
+full ANTLR C++ parser integration
+complete optimizer pipeline
+cross-platform installer output
+```
+
+## The honest status
+
+GPAC can currently make **small native console programs and compiler/runtime demonstrations**.
+
+Its strongest current use is as a **real language prototype** for proving:
+
+```text
+custom syntax
+frontend parsing
+C++ lowering
+backend bytecode emission
+LLVM artifact generation
+native executable output
+```
+
+So the crown is not “GPAC builds anything yet.”
+
+The crown is:
+
+> **GPAC already has a working path from custom `.gpac` source into native executable output.**
+
+⭐⭐⭐
+
