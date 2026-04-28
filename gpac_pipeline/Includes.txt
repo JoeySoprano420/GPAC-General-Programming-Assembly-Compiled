@@ -1,0 +1,7 @@
+ANTLR grammar
+C++ frontend scaffold
+LLVM lowering scaffold
+ZVM runtime
+working .gpac → C++ → native executable bootstrap compiler
+all example .gpac files
+build instructions and tests
